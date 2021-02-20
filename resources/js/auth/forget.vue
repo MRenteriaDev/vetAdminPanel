@@ -1,4 +1,4 @@
-<template>
+<template lang="">
     <!-- Register Content -->
     <div class="container-login">
         <div class="row justify-content-center">
@@ -10,18 +10,10 @@
                                 <div class="login-form">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">
-                                            Register
+                                            Forgot Password
                                         </h1>
                                     </div>
                                     <form>
-                                        <div class="form-group">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="exampleInputFirstName"
-                                                placeholder="Enter Your Full Name"
-                                            />
-                                        </div>
                                         <div class="form-group">
                                             <input
                                                 type="email"
@@ -32,27 +24,11 @@
                                             />
                                         </div>
                                         <div class="form-group">
-                                            <input
-                                                type="password"
-                                                class="form-control"
-                                                id="exampleInputPassword"
-                                                placeholder="Password"
-                                            />
-                                        </div>
-                                        <div class="form-group">
-                                            <input
-                                                type="password"
-                                                class="form-control"
-                                                id="exampleInputPasswordRepeat"
-                                                placeholder="Confirm Password"
-                                            />
-                                        </div>
-                                        <div class="form-group">
                                             <button
                                                 type="submit"
                                                 class="btn btn-primary btn-block"
                                             >
-                                                Register
+                                                Send
                                             </button>
                                         </div>
                                         <hr />
@@ -60,8 +36,7 @@
                                             <router-link
                                                 class="font-weight-bold small"
                                                 to="/"
-                                                >You have already an account
-                                                ?</router-link
+                                                >Back To Login</router-link
                                             >
                                         </div>
                                     </form>

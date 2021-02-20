@@ -14,7 +14,8 @@ window.Vue = require("vue");
 
 // Export the routes
 const router = new VueRouter({
-    routes
+    routes,
+    mode: "history"
 });
 
 const app = new Vue({
