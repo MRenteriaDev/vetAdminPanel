@@ -1,4 +1,4 @@
-<template lang="">
+<template >
     <!-- Register Content -->
     <div class="container-login">
         <div class="row justify-content-center">
@@ -50,7 +50,6 @@
     </div>
     <!-- Register Content -->
 </template>
-<script>
+<script type="application/javascript" >
 export default {};
 </script>
-<style lang=""></style>

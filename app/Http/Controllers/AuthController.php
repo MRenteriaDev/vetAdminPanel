@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,7 +17,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login','signup']]);
+        $this->middleware('JWT', ['except' => ['login','signup']]);
     }
 
     /**
@@ -79,6 +80,8 @@ class AuthController extends Controller
         $data = array();
         $data['name'] = $request->name;
         $data['email'] = $request->email;
+        $data['created_at'] = Carbon::now();
+        $data['updated_at'] = Carbon::now();
         $data['password'] = Hash::make($request->password);
         DB::table('users')->insert($data);
 

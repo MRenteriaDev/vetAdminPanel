@@ -75,7 +75,6 @@
     </div>
     <!-- Register Content -->
 </template>
-<script>
+<script type="application/javascript" >
 export default {};
 </script>
-<style lang=""></style>
