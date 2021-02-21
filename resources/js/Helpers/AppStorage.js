@@ -1,5 +1,3 @@
-import { use } from "vue/types/umd";
-
 class AppStorage {
     storeToken(token) {
         localStorage.setItem("token", token);

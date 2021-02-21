@@ -82,7 +82,7 @@
         </div>
     </div>
 </template>
-<script type="application/javascript" >
+<script type="application/javascript">
 // Import axios
 import axios from "axios";
 
@@ -99,12 +99,8 @@ export default {
         login() {
             axios
                 .post("api/auth/login", this.form)
-                .then(res => {
-                    console.log(res);
-                })
-                .catch(err => {
-                    console.log(err.message);
-                });
+                .then(res => User.responseAfterLogin(res))
+                .catch(error => console.log(error.res.data));
         }
     }
 };

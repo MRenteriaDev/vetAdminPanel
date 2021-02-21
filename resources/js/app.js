@@ -9,8 +9,11 @@ Vue.use(VueRouter);
 
 // Router imported
 import { routes } from "./routes";
-
 window.Vue = require("vue");
+
+// Import the User Class
+import User from "./Helpers/User";
+window.User = User;
 
 // Export the routes
 const router = new VueRouter({
