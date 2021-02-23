@@ -15,6 +15,11 @@ window.Vue = require("vue");
 import User from "./Helpers/User";
 window.User = User;
 
+// Notification noty js
+
+import Notification from "./Helpers/Notification";
+window.Notification = Notification;
+
 // Sweet alert start
 import Swal from "sweetalert2";
 window.Swal = Swal;
@@ -25,7 +30,7 @@ const Toast = Swal.mixin({
     showConfirmButton: false,
     timer: 3000,
     timerProgressBar: true,
-    onOpen: toast => {
+    didOpen: toast => {
         toast.addEventListener("mouseenter", Swal.stopTimer);
         toast.addEventListener("mouseleave", Swal.resumeTimer);
     }
