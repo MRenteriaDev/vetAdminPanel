@@ -5,7 +5,15 @@
                 >Add Employees</router-link
             >
         </div>
-        <br /><br />
+        <br />
+        <input
+            type="search"
+            class="form-control"
+            v-model="searchTerm"
+            style="width: 300px"
+            placeholder="Search here by name..."
+        />
+        <br />
         <div class="row">
             <div class="col-lg-12 mb-4">
                 <!-- Simple Tables -->
@@ -31,7 +39,7 @@
                             </thead>
                             <tbody>
                                 <tr
-                                    v-for="employee in employees"
+                                    v-for="employee in filterSearch"
                                     :key="employee.id"
                                 >
                                     <td>
@@ -79,8 +87,16 @@ import axios from "axios";
 export default {
     data() {
         return {
-            employees: []
+            employees: [],
+            searchTerm: ""
         };
+    },
+    computed: {
+        filterSearch() {
+            return this.employees.filter(employee => {
+                return employee.name.match(this.searchTerm);
+            });
+        }
     },
     methods: {
         allEmployees() {

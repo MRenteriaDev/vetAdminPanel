@@ -2686,20 +2686,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      employees: []
+      employees: [],
+      searchTerm: ""
     };
+  },
+  computed: {
+    filterSearch: function filterSearch() {
+      var _this = this;
+
+      return this.employees.filter(function (employee) {
+        return employee.name.match(_this.searchTerm);
+      });
+    }
   },
   methods: {
     allEmployees: function allEmployees() {
-      var _this = this;
+      var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/employee/").then(function (_ref) {
         var data = _ref.data;
-        return _this.employees = data;
+        return _this2.employees = data;
       })["catch"]();
     }
   },
@@ -46739,6 +46757,30 @@ var render = function() {
     ),
     _vm._v(" "),
     _c("br"),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.searchTerm,
+          expression: "searchTerm"
+        }
+      ],
+      staticClass: "form-control",
+      staticStyle: { width: "300px" },
+      attrs: { type: "search", placeholder: "Search here by name..." },
+      domProps: { value: _vm.searchTerm },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.searchTerm = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
     _c("br"),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
@@ -46755,7 +46797,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "tbody",
-                  _vm._l(_vm.employees, function(employee) {
+                  _vm._l(_vm.filterSearch, function(employee) {
                     return _c("tr", { key: employee.id }, [
                       _c("td", [
                         _c("a", { attrs: { href: "#" } }, [
