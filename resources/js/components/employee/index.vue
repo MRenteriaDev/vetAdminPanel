@@ -60,14 +60,11 @@
                                         }}</span>
                                     </td>
                                     <td>
+                                        <router-link :to="{   name: 'edit-employee', params:{id:employee.id}}" class="btn btn-sm btn-primary">Edit</router-link>
                                         <a
-                                            href="#"
-                                            class="btn btn-sm btn-primary"
-                                            >Edit</a
-                                        >
-                                        <a
-                                            href="#"
+                                            @click="deleteEmployee(employee.id)"
                                             class="btn btn-sm btn-danger"
+                                            style="color: #ffffff;"
                                             >Delete</a
                                         >
                                     </td>
@@ -104,6 +101,35 @@ export default {
                 .get("/api/employee/")
                 .then(({ data }) => (this.employees = data))
                 .catch();
+        },
+        deleteEmployee(id) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then(result => {
+                if (result.value) {
+                    axios
+                        .delete("/api/employee/" + id)
+                        .then(() => {
+                            this.employees = this.employees.filter(employee => {
+                                return (employee.id = id);
+                            });
+                        })
+                        .catch(() => {
+                            this.$router.push({ name: "index-employee" });
+                        });
+                    Swal.fire(
+                        "Deleted!",
+                        "Your file has been deleted.",
+                        "success"
+                    );
+                }
+            });
         }
     },
     created() {

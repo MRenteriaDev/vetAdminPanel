@@ -19,6 +19,7 @@ let home = require("./pages/Home.vue").default;
  */
 let storeemployee = require("./components/employee/create.vue").default;
 let indexemployee = require("./components/employee/index.vue").default;
+let editemployee = require("./components/employee/edit.vue").default;
 
 export const routes = [
     // Auth Routes
@@ -27,7 +28,9 @@ export const routes = [
     { path: "/forget", component: forget, name: "forget" },
     { path: "/logout", component: logout, name: "logout" },
     { path: "/home", component: home, name: "home" },
+
     // Employe Routes
+
     {
         path: "/store-employee",
         component: storeemployee,
@@ -37,5 +40,10 @@ export const routes = [
         path: "/index-employee",
         component: indexemployee,
         name: "index-employee"
-    }
+    },
+    {
+        path: "/edit-employee/:id",
+        component: editemployee,
+        name: "edit-employee"
+    },
 ];

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="{{ asset('backend/img/logo/cow-icon.png') }}" rel="icon">
-    <title>RuangAdmin - Dashboard</title>
+    <title>Administrador</title>
     <link href="{{ asset('backend/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('backend/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('backend/css/ruang-admin.min.css') }}" rel="stylesheet">
@@ -25,7 +25,7 @@
                         <div class="sidebar-brand-icon">
                             <img src="{{ asset('backend/img/logo/cow-icon.png') }}">
                         </div>
-                        <div class="sidebar-brand-text mx-3">VetPetAdmin</div>
+                        <div class="sidebar-brand-text mx-3">Administrador</div>
                     </router-link>
                     <hr class="sidebar-divider my-0">
                     <li class="nav-item active">
