@@ -15,7 +15,7 @@
                                 <div class="login-form">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">
-                                            Edit Employee
+                                            Employee Update
                                         </h1>
                                     </div>
 
@@ -216,8 +216,6 @@
 </template>
 
 <script type="text/javascript">
-import axios from "axios";
-
 export default {
     created() {
         if (!User.loggedIn()) {
@@ -240,6 +238,15 @@ export default {
             errors: {}
         };
     },
+    created(){
+        let id = this.$route.params.id;
+        console.log(id);
+        axios.get(`/api/employee/${id}`)
+            .then(({data}) => (this.form = data))
+            .catch((err) => {
+                console.log(err);
+            });
+    },
 
     methods: {
         onFileSelected(event) {
@@ -257,15 +264,6 @@ export default {
                 };
                 reader.readAsDataURL(file);
             }
-        },
-        created() {
-            let id = this.$route.params.id;
-            axios
-                .get("/api/employee/" + id)
-                .then(({ data }) => (this.form = data))
-                .catch(err => {
-                    console.log(err.message);
-                });
         },
         employeeInsert() {
             axios

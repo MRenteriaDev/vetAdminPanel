@@ -2609,227 +2609,228 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+var _created$data$created;
 
-/* harmony default export */ __webpack_exports__["default"] = ({
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = (_created$data$created = {
   created: function created() {
     if (!User.loggedIn()) {
       this.$router.push({
@@ -2851,57 +2852,56 @@ __webpack_require__.r(__webpack_exports__);
       },
       errors: {}
     };
-  },
-  methods: {
-    onFileSelected: function onFileSelected(event) {
-      var _this = this;
-
-      var file = event.target.files[0];
-
-      if (file.size > 1048770) {
-        Toast.fire({
-          icon: "error",
-          title: "Image must be less than 1Mb"
-        });
-      } else {
-        var reader = new FileReader();
-
-        reader.onload = function (event) {
-          _this.form.photo = event.target.result; // console.log(event.target.result);
-        };
-
-        reader.readAsDataURL(file);
-      }
-    },
-    created: function created() {
-      var _this2 = this;
-
-      var id = this.$route.params.id;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/employee/" + id).then(function (_ref) {
-        var data = _ref.data;
-        return _this2.form = data;
-      })["catch"](function (err) {
-        console.log(err.message);
-      });
-    },
-    employeeInsert: function employeeInsert() {
-      var _this3 = this;
-
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/employee", this.form).then(function () {
-        _this3.$router.push({
-          name: "index-employee"
-        });
-
-        Toast.fire({
-          icon: "success",
-          title: "Employee Added Succesfully"
-        });
-      })["catch"](function (error) {
-        return _this3.errors = error.response.data.errors;
-      });
-    }
   }
-});
+}, _defineProperty(_created$data$created, "created", function created() {
+  var _this = this;
+
+  var id = this.$route.params.id;
+  console.log(id);
+  axios.get("/api/employee/".concat(id)).then(function (_ref) {
+    var data = _ref.data;
+    return _this.form = data;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+}), _defineProperty(_created$data$created, "methods", {
+  onFileSelected: function onFileSelected(event) {
+    var _this2 = this;
+
+    var file = event.target.files[0];
+
+    if (file.size > 1048770) {
+      Toast.fire({
+        icon: "error",
+        title: "Image must be less than 1Mb"
+      });
+    } else {
+      var reader = new FileReader();
+
+      reader.onload = function (event) {
+        _this2.form.photo = event.target.result; // console.log(event.target.result);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  },
+  employeeInsert: function employeeInsert() {
+    var _this3 = this;
+
+    axios.post("/api/employee", this.form).then(function () {
+      _this3.$router.push({
+        name: "index-employee"
+      });
+
+      Toast.fire({
+        icon: "success",
+        title: "Employee Added Succesfully"
+      });
+    })["catch"](function (error) {
+      return _this3.errors = error.response.data.errors;
+    });
+  }
+}), _created$data$created);
 
 /***/ }),
 
@@ -3045,6 +3045,7 @@ __webpack_require__.r(__webpack_exports__);
             });
           });
           Swal.fire("Deleted!", "Your file has been deleted.", "success");
+          window.location.reload();
         }
       });
     }
@@ -47479,7 +47480,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "text-center" }, [
       _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
         _vm._v(
-          "\n                                        Edit Employee\n                                    "
+          "\n                                        Employee Update\n                                    "
         )
       ])
     ])

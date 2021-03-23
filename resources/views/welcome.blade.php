@@ -309,7 +309,7 @@
     </a>
 
     <script src="{{ asset('backend/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="/js/app.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
     <script>
         let token = localStorage.getItem('token');
         if (token) {

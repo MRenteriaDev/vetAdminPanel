@@ -60,7 +60,7 @@
                                         }}</span>
                                     </td>
                                     <td>
-                                        <router-link :to="{   name: 'edit-employee', params:{id:employee.id}}" class="btn btn-sm btn-primary">Edit</router-link>
+                                        <router-link :to="{name: 'edit-employee', params:{id: employee.id}}" class="btn btn-sm btn-primary">Edit</router-link>
                                         <a
                                             @click="deleteEmployee(employee.id)"
                                             class="btn btn-sm btn-danger"
@@ -128,6 +128,7 @@ export default {
                         "Your file has been deleted.",
                         "success"
                     );
+                    window.location.reload();
                 }
             });
         }
