@@ -1953,13 +1953,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -1975,21 +1968,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2613,44 +2591,6 @@ var _created$data$created;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -46043,9 +45983,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
       _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
-        _vm._v(
-          "\n                                        Forgot Password\n                                    "
-        )
+        _vm._v("Forgot Password")
       ])
     ])
   },
@@ -46073,11 +46011,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary btn-block", attrs: { type: "submit" } },
-        [
-          _vm._v(
-            "\n                                            Send\n                                        "
-          )
-        ]
+        [_vm._v("\n                      Send\n                    ")]
       )
     ])
   }
@@ -46252,11 +46186,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
-      _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
-        _vm._v(
-          "\n                                        Login\n                                    "
-        )
-      ])
+      _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [_vm._v("Login")])
     ])
   },
   function() {
@@ -46296,11 +46226,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary btn-block", attrs: { type: "submit" } },
-        [
-          _vm._v(
-            "\n                                            Login\n                                        "
-          )
-        ]
+        [_vm._v("\n                      Login\n                    ")]
       )
     ])
   }
@@ -47079,7 +47005,7 @@ var render = function() {
         _c(
           "router-link",
           { staticClass: "btn btn-primary", attrs: { to: "/index-employee" } },
-          [_vm._v("All Employee\n        ")]
+          [_vm._v("All Employee\n    ")]
         )
       ],
       1
@@ -47143,9 +47069,9 @@ var render = function() {
                             _vm.errors.name
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.name[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e()
@@ -47185,9 +47111,9 @@ var render = function() {
                             _vm.errors.email
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.email[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e()
@@ -47231,9 +47157,9 @@ var render = function() {
                             _vm.errors.address
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.address[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e()
@@ -47273,9 +47199,9 @@ var render = function() {
                             _vm.errors.sallery
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.sallery[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e()
@@ -47292,8 +47218,7 @@ var render = function() {
                                   name: "model",
                                   rawName: "v-model",
                                   value: _vm.form.joinig_date,
-                                  expression:
-                                    "\n                                                        form.joinig_date\n                                                    "
+                                  expression: "form.joinig_date"
                                 }
                               ],
                               staticClass: "form-control",
@@ -47320,9 +47245,9 @@ var render = function() {
                             _vm.errors.joinig_date
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.joinig_date[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e()
@@ -47358,9 +47283,9 @@ var render = function() {
                             _vm.errors.nid
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.nid[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e()
@@ -47404,9 +47329,9 @@ var render = function() {
                             _vm.errors.phone
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.phone[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e()
@@ -47428,9 +47353,9 @@ var render = function() {
                             _vm.errors.photo
                               ? _c("small", { staticClass: "text-danger" }, [
                                   _vm._v(
-                                    "\n                                                    " +
+                                    "\n                          " +
                                       _vm._s(_vm.errors.photo[0]) +
-                                      "\n                                                "
+                                      "\n                        "
                                   )
                                 ])
                               : _vm._e(),
@@ -47479,9 +47404,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
       _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
-        _vm._v(
-          "\n                                        Employee Update\n                                    "
-        )
+        _vm._v("Employee Update")
       ])
     ])
   },
@@ -47493,11 +47416,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary btn-block", attrs: { type: "submit" } },
-        [
-          _vm._v(
-            "\n                                            Submit\n                                        "
-          )
-        ]
+        [_vm._v("\n                      Submit\n                    ")]
       )
     ])
   }
